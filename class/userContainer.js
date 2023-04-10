@@ -1,6 +1,7 @@
 const connectToDd = require('../config/connectToMongo')
 const { userModel } = require('../schemas/mongoDbModel')
 
+
 const bcrypt = require('bcrypt')
 const saltRounds = 10
 

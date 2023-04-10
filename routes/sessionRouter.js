@@ -56,7 +56,7 @@ sessionRouter.post(
 )
 
 
-//------------ get cerrar sesion
+//------------ post cerrar sesion
 sessionRouter.post(
   '/logout',
   async (req, res) => {

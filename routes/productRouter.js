@@ -39,7 +39,7 @@ productRouter.get(
 
 //--------------------- post producto
 productRouter.post(
-  '/productosto',
+  '/productos/nuevo',
   async (req, res) => {
     const productToAdd = req.body
     const loaded = await newProduct ( productToAdd )

@@ -6,6 +6,7 @@ const decodedToken = require('./googleauth')
 const { logger, loggererr } = require('../log/logger')
 
 const { users } = require('../class/userContainer')
+const { newUser } = require('../controllers/usersController')
 
 
 passport.use(
@@ -48,7 +49,7 @@ passport.use(
   'register',
   new LocalStrategy(
     async function( username, password, done ) {
-      if ( await users.addUser (username, password ) ) {
+      if ( await newUser(username, password ) ) {
         return done( null, { username: username } )
       } else {
         logger.info(`No se ha podido registrar Usuario.`)
